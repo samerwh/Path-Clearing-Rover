@@ -182,6 +182,7 @@ class Camera:
         img =Image.open('sign.png')
         text = pytesseract.image_to_string(img, config='')
         print('Camera read: ' + text)
-        return text.split()[0] # return the first word in the string
+        command = text.split()[0] # return the first word in the detected string
+        return command
     
 
